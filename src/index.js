@@ -1,8 +1,8 @@
-const GoToClient = require('./structures/GoToClient');
-require('dotenv').config()
+const GoToClient = require("./structures/GoToClient");
+require("dotenv").config();
 
 let client = new GoToClient({
-  prefix: '!'
+  prefix: "!",
 });
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
