@@ -4,9 +4,12 @@ class UserInfoCommand extends Command {
   constructor() {
     super("userinfo", {
       aliases: ["userinfo", "info"],
-      description: "This command gives you informations of a user",
-      // ignoreCooldown: "622351654376964116",
-      // ignorePermissions: "622351654376964116",
+      category: "Misc",
+      description: {
+        content: 'La commande userinfo envoie les infos sur l\'utilisateur!',
+        usage: '(user)info <member>',
+        exemples: ['userinfo', 'info @member']
+      },
       userPermissions: "KICK_MEMBERS",
       clientPermissions: "KICK_MEMBERS",
       rateLimit: 2,
@@ -14,10 +17,6 @@ class UserInfoCommand extends Command {
       typing: false,
       ownerOnly: true,
       channel: "guild",
-      // args: [
-      //   {id: "firstArgs", match: "content"},
-      //   {id: "secondArgs", match: "rest"},
-      // ],
       args: [{ id: "member", type: "member", default: (message) => message.member }],
     });
   }

@@ -5,10 +5,11 @@ class RestartCommand extends Command {
     super("restart", {
       aliases: ["restart", "rs"],
       ownerOnly: true,
+      category: "Dev",
     });
   }
 
-  exec(message) {
+  exec() {
     require("child_process").execSync("pm2 restart 0");
   }
 }
